@@ -1,6 +1,6 @@
 # 🐾 Mundo Pet - Plataforma Online
 
-Este projeto consiste no desenvolvimento do front-end de um sistema web para o pet shop **Mundo Pet**. O site foi desenvolvido como parte da Fase 1 do Projeto de Disciplina, focando na estruturação semântica e organização de conteúdo utilizando apenas HTML puro.
+Este projeto consiste no desenvolvimento do front-end de um sistema web para o pet shop **Mundo Pet**. O site foi desenvolvido como parte da Fase 1 do Projeto da disciplina de Fundamentos de Sistemas Web, focando na estruturação semântica e organização de conteúdo utilizando apenas HTML puro.
 
 ## 🚀 Objetivo do Projeto
 O objetivo desta fase é criar a fundação estrutural do site, apresentando o catálogo de produtos e a lista de serviços oferecidos, garantindo a navegabilidade e a clareza das informações para o usuário final.
