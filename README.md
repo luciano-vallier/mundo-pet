@@ -22,6 +22,7 @@ A página principal (`index.html`) apresenta:
 
 ## 📦 Como visualizar o projeto
 Você pode acessar o site publicado diretamente através do link abaixo:
+
 👉 https://luciano-vallier.github.io/mundo-pet/
 
 ---
