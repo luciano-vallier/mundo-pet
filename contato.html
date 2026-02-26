@@ -8,7 +8,7 @@
 <body><font face="Verdana">
     
 <header align="center">
-    <img src="Source/logo.jpg" alt="logotipo Mundo Pet" width="600">
+    <img src="Source/logo.jpg" alt="logotipo Mundo Pet" width="500">
     
     <hr>
    
@@ -23,11 +23,33 @@
 <hr>
 
 <main>
-    <section align="center">
-        <h2>Dúvidas? Fale conosco!</h2>
-        <p><i>Formulário em manutenção, desculpe o transtorno.</i></p>
-        <p><i>Você pode visualizar telefone e email no rodapé da página.</i></p>
+     <section align="center">
+        <h2>Fale Conosco</h2>
+        <p>Tem alguma dúvida ou deseja agendar um serviço? Preencha o formulário abaixo:</p>
+        
+        <form action="#" method="post">
+            <table align="center" cellpadding="10">
+                <tr>
+                    <td align="right"><b>Nome:</b></td>
+                    <td><input type="text" name="nome" size="40" required></td>
+                </tr>
+                <tr>
+                    <td align="right"><b>E-mail:</b></td>
+                    <td><input type="email" name="email" size="40" required></td>
+                </tr>
+                <tr>
+                    <td align="right" valign="top"><b>Mensagem:</b></td>
+                    <td><textarea name="mensagem" rows="5" cols="41" required></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Enviar Mensagem">
+                    </td>
+                </tr>
+            </table>
+        </form>
     </section>
+
 </main>
 
 <hr>
