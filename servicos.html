@@ -3,57 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo Pet</title>
+    <title>Mundo Pet - Contato</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilização para os links de navegação */
+        .class_nav {
+            background-color: #0f1975;
+            color: white !important;
+            border-radius: 5px;
+            margin: 0 5px;
+            padding: 8px 20px; 
+            text-decoration: none;
+        }
+        .class_nav:hover {
+            background-color: #1726ad;
+        }
+        .class_nav.active {
+            background-color: #e98203;
+            font-weight: bold;
+        }
+    </style>
 </head>
-<body>
-    
-<header align="center">
-    <img src="Source/logo.jpg" alt="logotipo Mundo Pet" width="500">
-    
-    <hr>
-      
-    <nav><h3>
-        <a href="index.html">Início</a> | 
-        <a href="produtos.html">Produtos</a> | 
-        <a href="servicos.html">Serviços</a> | 
-        <a href="contato.html">Contato</a>
-    </h3></nav>
+
+<body class="bg-light">>
+
+<!-- LOGO E LINKS DE NAVEGAÇÃO -->
+<header class="text-center py-4 bg-white border-bottom">
+    <img src="Source/logo.jpg" alt="Logotipo Mundo Pet" width="500">
+    <nav class="justify-content-center">
+        <a class="class_nav" href="index.html">Início</a>
+        <a class="class_nav" href="produtos.html">Produtos</a>
+        <a class="class_nav active" href="servicos.html">Serviços</a>
+        <a class="class_nav" href="contato.html">Contato</a>
+    </nav>
 </header>
 
-<hr>
-
-<main>
-    <section align="center">
-        <h2>Banho e Tosa</h2>
-        <table width="45%" align="center">
-            <tr>
-                <td>
-                    <img src="Source/banho-e-tosa.jpg" alt="Banho e Tosa" width="250">
-                </td>
-            <td>
-                <h3>Tele-busca</h3>
-                Buscamos e entregamos o seu Pet
-                <p><i>R$ 129,90 </i></p>
+<section class="mb-5 py-0 border-top border-0 border"><br>
+    <h2 class="text-center mb-4">Nossos serviços de Banho e Tosa</h2>
+    <div class="row g-0 align-items-center justify-content-center">
+        <div class="col-md-4 text-center">
+            <img src="Source/banho-e-tosa.jpg" alt="Banho e Tosa" class="img-fluid rounded-4 shadow-sm" width="300">
+        </div>
+        <div class="col-md-5 ps-md-4 text-center text-md-start mt-4 mt-md-0">
+            <div class="mb-4">
+                <h4 class="fw-bold">Tele-busca</h4>
+                <p class="text-muted">Buscamos e entregamos o seu Pet com toda segurança.</p>
+                <p class="h5 text-primary fw-bold">R$ 129,90</p>
+            </div>
             <hr>
-                <h3>Entrega no local</h3>
-                Você transporta seu Pet
-                <p><i>R$ 99,90</i></p>
-            </td></tr>
-        </table>
-        <p>Para agendar um serviço, <a href="contato.html"><b>clique aqui</b></a>.</p>
-    </section>
-</main>
+            <div>
+                <h4 class="fw-bold">Entrega no local</h4>
+                <p class="text-muted">Você transporta seu Pet até nossa unidade física.</p>
+                <p class="h5 text-primary fw-bold">R$ 99,90</p>
+            </div>
+            <div class="text-center mt-3">
+                <a href="contato.html" class="btn fw-bold text-white" style="background-color: #e98203;">AGENDAR AGORA</a>
+            </div>
+        </div>
+    </div>
+</section>
 
-<hr>
-
-<footer><p align="center">
-    <b>Mundo Pet</b> - CNPJ: 00.000.000/0001-00<br>
-    Rua dos Pets, 123 - Porto Alegre/RS<br>
-    Contato: (51) 99999-9999 | contato@mundopet.com.br<br>
-
-    <br>© 2026 Mundo Pet - Desenvolvido por Luciano Vallier</p>
+<footer class="bg-dark text-light text-center py-4 mt-auto">
+    <div class="container small">
+        <p class="mb-1"><strong>Mundo Pet</strong> - CNPJ: 00.000.000/0001-00</p>
+        <p class="mb-1">Rua dos Pets, 123 - Porto Alegre/RS</p>
+        <p class="mb-2">Contato: (51) 99999-9999 | contato@mundopet.com.br</p>
+        <p class="mb-0 text-secondary small">© 2026 Mundo Pet - Desenvolvido por Luciano Vallier</p>
+    </div>
 </footer>
 
-</body>
+<script>
+    document.getElementById('formAgendamento').onsubmit = function(event) {
+        event.preventDefault();
+        alert('Agendamento enviado com sucesso! Aguarde nosso contato para confirmação.');
+    };
+</script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

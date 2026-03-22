@@ -3,114 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo Pet</title>
+    <title>Mundo Pet - Contato</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilização para os links de navegação */
+        .class_nav {
+            background-color: #0f1975;
+            color: white !important;
+            border-radius: 5px;
+            margin: 0 5px;
+            padding: 8px 20px; 
+            text-decoration: none;
+        }
+        .class_nav:hover {
+            background-color: #1726ad;
+        }
+        .class_nav.active {
+            background-color: #e98203;
+            font-weight: bold;
+        }
+    </style>
 </head>
-<body>
-    
-<header align="center">
-    <img src="Source/logo.jpg" alt="logotipo Mundo Pet" width="500">
-    
-    <hr>
-    
-    <nav><h3>
-        <a href="index.html">Início</a> | 
-        <a href="produtos.html">Produtos</a> | 
-        <a href="servicos.html">Serviços</a> | 
-        <a href="contato.html">Contato</a>
-    </h3></nav>
+<body class="bg-light">
+
+<header class="text-center py-4 bg-white border-bottom">
+    <img src="Source/logo.jpg" alt="Logotipo Mundo Pet" width="500">
+    <nav class="justify-content-center">
+        <a class="class_nav" href="index.html">Início</a>
+        <a class="class_nav active" href="produtos.html">Produtos</a>
+        <a class="class_nav" href="servicos.html">Serviços</a>
+        <a class="class_nav" href="contato.html">Contato</a>
+    </nav>
 </header>
 
-<hr>
+<br>
 
-<main>
-    <section align="center">
-        <h2>Acessórios</h2>
-        <table width="40%" align="center">
-            <tr><td>
-                <img src="Source/cama.jpg" alt="Cama Pet P" width="230">
-                <br><b>Cama Pet P</b>
-                <p>Conforto e maciez para o sono do seu pet.</p>
-                <p><i>R$ 74,90</i></p>
-            </td>
-            <td>
-                <img src="Source/fonte.jpg" alt="Bebedouro Gato" width="230">
-                <br><b>Bebedouro Gato</b>
-                <p>Água sempre fresca com filtro de carvão ativado.</p>
-                <p><i>R$ 89,90</i></p>
-            </td>
-            <td>
-                <img src="Source/coleira.jpg" alt="Coleira Ajustável" width="230">
-                <br><b>Coleira Ajustável M</b>
-                <p>Material resistente e fecho de segurança.</p>
-                <p><i>R$ 29,90</i></p>
-            </td></tr>
-        </table>
-    </section>
+<main class="container my-2">
 
-    <hr>
+    <!-- CARD DA CATEGORIA: ACESSÓRIOS -->
+    <div class="card mb-3">
+        <div class="card-header bg-primary text-white p-2">
+            <h3 class="text-center">Acessórios</h3>
+        </div>
+        <div class="card-body p-3">
+            <div class="row g-4 align-items-center text-center">
+                <!-- Produto 1 -->
+                <div class="col-md-3 col-sm-6">
+                    <img src="Source/cama.jpg" alt="Cama Pet" class="img-fluid mb-2" style="max-height: 150px;">
+                    <h6 class="fw-bold">Cama Pet P</h6>
+                    <p class="text-primary fw-bold mb-0">R$ 74,90</p>
+                </div>
+                <!-- Produto 2 -->
+                <div class="col-md-3 col-sm-6">
+                    <img src="Source/fonte.jpg" alt="Bebedouro" class="img-fluid mb-2" style="max-height: 150px;">
+                    <h6 class="fw-bold">Bebedouro Gato</h6>
+                    <p class="text-primary fw-bold mb-0">R$ 89,90</p>
+                </div>
+                <!-- Produto 3 -->
+                <div class="col-md-3 col-sm-6">
+                    <img src="Source/coleira.jpg" alt="Coleira" class="img-fluid mb-2" style="max-height: 150px;">
+                    <h6 class="fw-bold">Coleira Ajustável</h6>
+                    <p class="text-primary fw-bold mb-0">R$ 29,90</p>
+                </div>
+                <!-- ESPAÇO VEJA MAIS -->
+                <div class="col-md-3 col-sm-6">
+                    <a href="#" class="btn btn-outline-primary fw-bold w-100 py-3">
+                        VEJA MAIS<br>ACESSÓRIOS
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <section align="center">
-        <h2>Rações e Petiscos</h2>
-        <table width="40%" align="center">
-            <tr><td>
-                <img src="Source/racao.jpg" alt="Ração 10kg" width="230">
-                <br><b>Ração Cães Adultos 10kg</b>
-                <p>Nutrição completa com vitaminas e minerais.</p>
-                <p><i>R$ 142,90</i></p>
-            </td>
-            <td>
-                <img src="Source/sache.jpg" alt="Sachê Gato" width="230">
-                <br><b>Sachê Gourmet Gato</b>
-                <p>Pedaços de salmão para paladares exigentes.</p>
-                <p><i>R$ 3,50</i></p>
-            </td>
-            <td>
-                <img src="Source/petisco.jpg" alt="Petisco Natural" width="230">
-                <br><b>Petisco Natural</b>
-                <p>Snack saudável e livre de conservantes artificiais.</p>
-                <p><i>R$ 15,00</i></p>
-            </td></tr>
-        </table>
-    </section>
+    <!-- CARD DA CATEGORIA: RAÇÕES -->
+    <div class="card shadow-sm mb- border-0 bg-white">
+        <div class="card-header bg-success text-white p-2">
+            <h3 class="mb-0 text-center">Rações e Petiscos</h3>
+        </div>
+        <div class="card-body p-4">
+            <div class="row g-4 align-items-center text-center">
+                <!-- Produto 1 -->
+                <div class="col-md-3 col-sm-6">
+                    <img src="Source/racao.jpg" alt="Ração" class="img-fluid mb-2" style="max-height: 150px;">
+                    <h6 class="fw-bold">Cães Adultos 10kg</h6>
+                    <p class="text-success fw-bold mb-0">R$ 142,90</p>
+                </div>
+                <!-- Produto 2 -->
+                <div class="col-md-3 col-sm-6">
+                    <img src="Source/sache.jpg" alt="Sachê" class="img-fluid mb-2" style="max-height: 150px;">
+                    <h6 class="fw-bold">Sachê Gourmet</h6>
+                    <p class="text-success fw-bold mb-0">R$ 3,50</p>
+                </div>
+                <!-- Produto 3 -->
+                <div class="col-md-3 col-sm-6">
+                    <img src="Source/petisco.jpg" alt="Petisco" class="img-fluid mb-2" style="max-height: 150px;">
+                    <h6 class="fw-bold">Petisco Natural</h6>
+                    <p class="text-success fw-bold mb-0">R$ 15,00</p>
+                </div>
+                <!-- ESPAÇO VEJA MAIS -->
+                <div class="col-md-3 col-sm-6">
+                    <a href="#" class="btn btn-outline-success fw-bold w-100 py-3">
+                        VEJA MAIS<br>RAÇÕES
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <hr>
-
-    <section align="center">
-        <h2>Higiene e Limpeza</h2>
-        <table width="40%" align="center">
-            <tr><td>
-                <img src="Source/tapete.jpg" alt="Tapete Higiênico" width="230">
-                <br><b>Tapete Higiênico G</b>
-                <p>Controle de odor e máxima absorção.</p>
-                <p><i>R$ 84,90</i></p>
-            </td>
-            <td>
-                <img src="Source/spray.jpg" alt="Spray Desinfetante" width="230">
-                <br><b>Spray Desinfetante</b>
-                <p>Eficaz contra germes e odores de urina.</p>
-                <p><i>R$ 19,90</i></p>
-            </td>
-            <td>
-                <img src="Source/shampoo.jpg" alt="Shampoo Neutro" width="230">
-                <br><b>Shampoo Neutro 500ml</b>
-                <p>PH balanceado para não irritar a pele do animal.</p>
-                <p><i>R$ 24,50</i></p>
-            </td></tr>
-        </table>
-    </section>
+    <!-- CARD DA CATEGORIA: HIGIENE -->
+    <div class="card shadow-sm mb-5 border-0 bg-white">
+        <div class="card-header bg-info text-white p-2">
+            <h3 class="mb-0 text-center">Higiene e Limpeza</h3>
+        </div>
+        <div class="card-body p-4">
+            <div class="row g-4 align-items-center text-center">
+                <!-- Produto 1 -->
+                <div class="col-md-3 col-sm-6">
+                    <img src="Source/tapete.jpg" alt="Tapete" class="img-fluid mb-2" style="max-height: 150px;">
+                    <h6 class="fw-bold">Tapete Higiênico</h6>
+                    <p class="text-info fw-bold mb-0">R$ 84,90</p>
+                </div>
+                <!-- Produto 2 -->
+                <div class="col-md-3 col-sm-6">
+                    <img src="Source/spray.jpg" alt="Spray" class="img-fluid mb-2" style="max-height: 150px;">
+                    <h6 class="fw-bold">Spray Desinfetante</h6>
+                    <p class="text-info fw-bold mb-0">R$ 19,90</p>
+                </div>
+                <!-- Produto 3 -->
+                <div class="col-md-3 col-sm-6">
+                    <img src="Source/shampoo.jpg" alt="Shampoo" class="img-fluid mb-2" style="max-height: 150px;">
+                    <h6 class="fw-bold">Shampoo Neutro</h6>
+                    <p class="text-info fw-bold mb-0">R$ 24,50</p>
+                </div>
+                <!-- ESPAÇO VEJA MAIS -->
+                <div class="col-md-3 col-sm-6">
+                    <a href="#" class="btn btn-outline-info fw-bold w-100 py-3">
+                        VEJA MAIS<br>HIGIENE
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </main>
 
 <hr>
 
-<footer><p align="center">
-    <b>Mundo Pet</b> - CNPJ: 00.000.000/0001-00<br>
-    Rua dos Pets, 123 - Porto Alegre/RS<br>
-    Contato: (51) 99999-9999 | contato@mundopet.com.br<br>
-
-    <br>© 2026 Mundo Pet - Desenvolvido por Luciano Vallier</p>
+<footer class="bg-dark text-light text-center py-4 mt-auto">
+    <div class="container small">
+        <p class="mb-1"><strong>Mundo Pet</strong> - CNPJ: 00.000.000/0001-00</p>
+        <p class="mb-1">Rua dos Pets, 123 - Porto Alegre/RS</p>
+        <p class="mb-2">Contato: (51) 99999-9999 | contato@mundopet.com.br</p>
+        <p class="mb-0 text-secondary small">© 2026 Mundo Pet - Desenvolvido por Luciano Vallier</p>
+    </div>
 </footer>
 
-</body>
+<script>
+    document.getElementById('formAgendamento').onsubmit = function(event) {
+        event.preventDefault();
+        alert('Agendamento enviado com sucesso! Aguarde nosso contato para confirmação.');
+    };
+</script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

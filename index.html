@@ -3,134 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo Pet</title>
+    <title>Mundo Pet - Início</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .class_nav {
+            background-color: #0f1975;
+            color: white !important;
+            border-radius: 5px;
+            margin: 0 5px;
+            padding: 8px 20px; 
+            text-decoration: none;
+            display: inline-block;
+        }
+        .class_nav:hover { background-color: #1726ad; }
+        .class_nav.active { background-color: #e98203; font-weight: bold; }
+        
+        /* Ajuste do Carrossel */
+        .carousel-item img { height: 450px; object-fit: cover; }
+    </style>
 </head>
-<body>
-    
-<header align="center">
-    <img src="Source/logo.jpg" alt="logotipo Mundo Pet" width="500">
-    
-    <hr>
-  
-    <nav><h3>
-        <a href="index.html">Início</a> | 
-        <a href="produtos.html">Produtos</a> | 
-        <a href="servicos.html">Serviços</a> | 
-        <a href="contato.html">Contato</a>
-    </h3></nav>
+<body class="bg-light">
+
+<header class="text-center py-4 bg-white border-bottom shadow-sm">
+    <img src="Source/logo.jpg" alt="Logotipo Mundo Pet" width="400" class="img-fluid mb-3">
+    <nav class="d-flex justify-content-center flex-wrap gap-2">
+        <a class="class_nav active" href="index.html">Início</a>
+        <a class="class_nav" href="produtos.html">Produtos</a>
+        <a class="class_nav" href="servicos.html">Serviços</a>
+        <a class="class_nav" href="contato.html">Contato</a>
+    </nav>
 </header>
 
-<hr>
+<main class="container my-5">
 
-<main>
-    <section align="center">
-        <h2>Principais escolhas em acessórios</h2>
-        <table width="40%" align="center">
-            <tr><td>
-                <img src="Source/cama.jpg" alt="Cama Pet P" width="230">
-                <br><b>Cama Pet P</b>
-                <p>Conforto e maciez para o sono do seu pet.</p>
-                <p><i>R$ 74,90</i></p>
-            </td>
-            <td>
-                <img src="Source/fonte.jpg" alt="Bebedouro Gato" width="230">
-                <br><b>Bebedouro Gato</b>
-                <p>Água sempre fresca com filtro de carvão ativado.</p>
-                <p><i>R$ 89,90</i></p>
-            </td>
-            <td>
-                <img src="Source/coleira.jpg" alt="Coleira Ajustável" width="230">
-                <br><b>Coleira Ajustável M</b>
-                <p>Material resistente e fecho de segurança.</p>
-                <p><i>R$ 29,90</i></p>
-            </td></tr>
-        </table>
-    </section>
+    <!-- CARROSSEL COM 3 CATEGORIAS (Requisito Fase 2) -->
+    <div id="promoCarousel" class="carousel slide mb-5 shadow rounded overflow-hidden" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <!-- Slide 1: Serviços -->
+            <div class="carousel-item active">
+                <img src="Source/banho-e-tosa.jpg" class="d-block w-100" alt="Promoção Banho e Tosa">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                    <h5>Banho e Tosa Profissional</h5>
+                    <p>Agende um horário para o seu melhor amigo.</p>
+                </div>
+            </div>
+            <!-- Slide 2: Rações -->
+            <div class="carousel-item">
+                <img src="Source/racao.jpg" class="d-block w-100" alt="Promoção Rações">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                    <h5>Nutrição de Qualidade</h5>
+                    <p>As melhores marcas de ração você encontra aqui.</p>
+                </div>
+            </div>
+            <!-- Slide 3: Higiene -->
+            <div class="carousel-item">
+                <img src="Source/shampoo.jpg" class="d-block w-100" alt="Produtos de Higiene">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                    <h5>Higiene e Bem-estar</h5>
+                    <p>Linha completa de shampoos e tapetes higiênicos.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
 
-    <hr>
+    <h2 class="text-center mb-5">Destaques Mundo Pet</h2>
 
-    <section align="center">
-        <h2>Rações e petiscos mais vendidos</h2>
-        <table width="40%" align="center">
-            <tr><td>
-                <img src="Source/racao.jpg" alt="Ração 10kg" width="230">
-                <br><b>Ração Cães Adultos 10kg</b>
-                <p>Nutrição completa com vitaminas e minerais.</p>
-                <p><i>R$ 142,90</i></p>
-            </td>
-            <td>
-                <img src="Source/sache.jpg" alt="Sachê Gato" width="230">
-                <br><b>Sachê Gourmet Gato</b>
-                <p>Pedaços de salmão para paladares exigentes.</p>
-                <p><i>R$ 3,50</i></p>
-            </td>
-            <td>
-                <img src="Source/petisco.jpg" alt="Petisco Natural" width="230">
-                <br><b>Petisco Natural</b>
-                <p>Snack saudável e livre de conservantes artificiais.</p>
-                <p><i>R$ 15,00</i></p>
-            </td></tr>
-        </table>
-    </section>
+    <!-- CARD ACESSÓRIOS (Sem "Veja Mais") -->
+    <div class="card mb-5 shadow-sm border-0">
+        <div class="card-header bg-primary text-white text-center fw-bold py-3">Principais Acessórios</div>
+        <div class="card-body">
+            <div class="row text-center g-4 justify-content-center">
+                <div class="col-md-4">
+                    <img src="Source/cama.jpg" alt="Cama" class="img-fluid mb-2" style="height: 140px;">
+                    <p class="mb-0 fw-bold">Cama Pet P</p>
+                    <p class="text-primary fw-bold">R$ 74,90</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="Source/fonte.jpg" alt="Fonte" class="img-fluid mb-2" style="height: 140px;">
+                    <p class="mb-0 fw-bold">Bebedouro Gato</p>
+                    <p class="text-primary fw-bold">R$ 89,90</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="Source/coleira.jpg" alt="Coleira" class="img-fluid mb-2" style="height: 140px;">
+                    <p class="mb-0 fw-bold">Coleira Ajustável</p>
+                    <p class="text-primary fw-bold">R$ 29,90</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <hr>
+    <!-- CARD RAÇÕES (Sem "Veja Mais") -->
+    <div class="card mb-5 shadow-sm border-0">
+        <div class="card-header bg-success text-white text-center fw-bold py-3">Rações e Petiscos</div>
+        <div class="card-body">
+            <div class="row text-center g-4 justify-content-center">
+                <div class="col-md-4">
+                    <img src="Source/racao.jpg" alt="Ração" class="img-fluid mb-2" style="height: 140px;">
+                    <p class="mb-0 fw-bold">Ração 10kg</p>
+                    <p class="text-success fw-bold">R$ 142,90</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="Source/sache.jpg" alt="Sachê" class="img-fluid mb-2" style="height: 140px;">
+                    <p class="mb-0 fw-bold">Sachê Gourmet</p>
+                    <p class="text-success fw-bold">R$ 3,50</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="Source/petisco.jpg" alt="Petisco" class="img-fluid mb-2" style="height: 140px;">
+                    <p class="mb-0 fw-bold">Petisco Natural</p>
+                    <p class="text-success fw-bold">R$ 15,00</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <section align="center">
-        <h2>Produtos de higiene e limpeza mais buscados</h2>
-        <table width="40%" align="center">
-            <tr><td>
-                <img src="Source/tapete.jpg" alt="Tapete Higiênico" width="230">
-                <br><b>Tapete Higiênico G</b>
-                <p>Controle de odor e máxima absorção.</p>
-                <p><i>R$ 84,90</i></p>
-            </td>
-            <td>
-                <img src="Source/spray.jpg" alt="Spray Desinfetante" width="230">
-                <br><b>Spray Desinfetante</b>
-                <p>Eficaz contra germes e odores de urina.</p>
-                <p><i>R$ 19,90</i></p>
-            </td>
-            <td>
-                <img src="Source/shampoo.jpg" alt="Shampoo Neutro" width="230">
-                <br><b>Shampoo Neutro 500ml</b>
-                <p>PH balanceado para não irritar a pele do animal.</p>
-                <p><i>R$ 24,50</i></p>
-            </td></tr>
-        </table>
-    </section>
+    <!-- CARD HIGIENE (Sem "Veja Mais") -->
+    <div class="card mb-5 shadow-sm border-0">
+        <div class="card-header bg-info text-white text-center fw-bold py-3">Higiene e Limpeza</div>
+        <div class="card-body">
+            <div class="row text-center g-4 justify-content-center">
+                <div class="col-md-4">
+                    <img src="Source/tapete.jpg" alt="Tapete" class="img-fluid mb-2" style="height: 140px;">
+                    <p class="mb-0 fw-bold">Tapete Higiênico</p>
+                    <p class="text-info fw-bold">R$ 84,90</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="Source/spray.jpg" alt="Spray" class="img-fluid mb-2" style="height: 140px;">
+                    <p class="mb-0 fw-bold">Spray Limpeza</p>
+                    <p class="text-info fw-bold">R$ 19,90</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="Source/shampoo.jpg" alt="Shampoo" class="img-fluid mb-2" style="height: 140px;">
+                    <p class="mb-0 fw-bold">Shampoo Neutro</p>
+                    <p class="text-info fw-bold">R$ 24,50</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <hr>
-
-    <section align="center">
-        <h2>Nossos serviços de Banho e Tosa</h2>
-        <table width="45%" align="center">
-            <tr>
-                <td>
-                    <img src="Source/banho-e-tosa.jpg" alt="Banho e Tosa" width="250">
-                </td>
-            <td>
-                <h3>Tele-busca</h3>
-                Buscamos e entregamos o seu Pet
-                <p><i>R$ 129,90 </i></p>
-            <hr>
-                <h3>Entrega no local</h3>
-                Você transporta seu Pet
-                <p><i>R$ 99,90</i></p>
-            </td></tr>
-        </table>
-    </section>
 </main>
 
-<hr>
-
-<footer><p align="center">
-    <b>Mundo Pet</b> - CNPJ: 00.000.000/0001-00<br>
-    Rua dos Pets, 123 - Porto Alegre/RS<br>
-    Contato: (51) 99999-9999 | contato@mundopet.com.br<br>
-
-    <br>© 2026 Mundo Pet - Desenvolvido por Luciano Vallier</p>
+<footer class="bg-dark text-light text-center py-4 mt-auto">
+    <div class="container small">
+        <p class="mb-1"><strong>Mundo Pet</strong> - CNPJ: 00.000.000/0001-00</p>
+        <p class="mb-1">Rua dos Pets, 123 - Porto Alegre/RS</p>
+        <p class="mb-2">Contato: (51) 99999-9999 | contato@mundopet.com.br</p>
+        <p class="mb-0 text-secondary small">© 2026 Mundo Pet - Desenvolvido por Luciano Vallier</p>
+    </div>
 </footer>
 
-</body>
+<script>
+    document.getElementById('formAgendamento').onsubmit = function(event) {
+        event.preventDefault();
+        alert('Agendamento enviado com sucesso! Aguarde nosso contato para confirmação.');
+    };
+</script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
