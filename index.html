@@ -6,6 +6,7 @@
     <title>Mundo Pet - Início</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        /* Estilização para os links de navegação e carrossel */
         .class_nav {
             background-color: #0f1975;
             color: white !important;
@@ -14,9 +15,17 @@
             text-decoration: none;
             display: inline-block;
         }
-        .class_nav:hover { background-color: #1726ad; }
-        .class_nav.active { background-color: #e98203; font-weight: bold; }
-        .carousel-item img { height: 450px; object-fit: cover; }
+        .class_nav:hover { 
+            background-color: #1726ad; 
+        }
+        .class_nav.active { 
+            background-color: #e98203; 
+            font-weight: bold; 
+        }
+        .carousel-item img { 
+            height: 450px; 
+            object-fit: cover; 
+        }
     </style>
 </head>
 <body class="bg-light">
@@ -32,14 +41,14 @@
     </nav>
 </header>
 
-<main class="container my-5">
+<main class="container my-4">
 
     <!-- CARROSSEL -->
-    <div id="promoCarousel" class="carousel slide mb-5 shadow rounded overflow-hidden" data-bs-ride="carousel">
+    <div id="Carousel" class="carousel slide mb-5 rounded overflow-hidden" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#Carousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#Carousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#Carousel" data-bs-slide-to="2"></button>
         </div>
         <div class="carousel-inner">
             <!-- Slide Serviços -->
@@ -67,83 +76,77 @@
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
     </div>
 
     <h2 class="text-center mb-5">Destaques Mundo Pet</h2>
 
     <!--ACESSÓRIOS -->
-    <div class="card mb-5 shadow-sm border-0">
+    <div class="card mb-5 border-0">
         <div class="card-header bg-primary text-white text-center fw-bold py-3">Principais Acessórios</div>
         <div class="card-body">
             <div class="row text-center g-4 justify-content-center">
                 <div class="col-md-4">
                     <img src="Source/cama.jpg" alt="Cama" class="img-fluid mb-2" style="height: 140px;">
                     <p class="mb-0 fw-bold">Cama Pet P</p>
-                    <p class="text-primary fw-bold">R$ 74,90</p>
+                    <p class="fw-bold">R$ 74,90</p>
                 </div>
                 <div class="col-md-4">
                     <img src="Source/fonte.jpg" alt="Fonte" class="img-fluid mb-2" style="height: 140px;">
                     <p class="mb-0 fw-bold">Bebedouro Gato</p>
-                    <p class="text-primary fw-bold">R$ 89,90</p>
+                    <p class="fw-bold">R$ 89,90</p>
                 </div>
                 <div class="col-md-4">
                     <img src="Source/coleira.jpg" alt="Coleira" class="img-fluid mb-2" style="height: 140px;">
                     <p class="mb-0 fw-bold">Coleira Ajustável</p>
-                    <p class="text-primary fw-bold">R$ 29,90</p>
+                    <p class="fw-bold">R$ 29,90</p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- RAÇÕES-->
-    <div class="card mb-5 shadow-sm border-0">
+    <div class="card mb-5 border-0">
         <div class="card-header bg-success text-white text-center fw-bold py-3">Rações e Petiscos</div>
         <div class="card-body">
             <div class="row text-center g-4 justify-content-center">
                 <div class="col-md-4">
                     <img src="Source/racao.jpg" alt="Ração" class="img-fluid mb-2" style="height: 140px;">
                     <p class="mb-0 fw-bold">Ração 10kg</p>
-                    <p class="text-success fw-bold">R$ 142,90</p>
+                    <p class="fw-bold">R$ 142,90</p>
                 </div>
                 <div class="col-md-4">
                     <img src="Source/sache.jpg" alt="Sachê" class="img-fluid mb-2" style="height: 140px;">
                     <p class="mb-0 fw-bold">Sachê Gourmet</p>
-                    <p class="text-success fw-bold">R$ 3,50</p>
+                    <p class="fw-bold">R$ 3,50</p>
                 </div>
                 <div class="col-md-4">
                     <img src="Source/petisco.jpg" alt="Petisco" class="img-fluid mb-2" style="height: 140px;">
                     <p class="mb-0 fw-bold">Petisco Natural</p>
-                    <p class="text-success fw-bold">R$ 15,00</p>
+                    <p class="fw-bold">R$ 15,00</p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- HIGIENE -->
-    <div class="card mb-5 shadow-sm border-0">
+    <div class="card mb-5 border-0">
         <div class="card-header bg-info text-white text-center fw-bold py-3">Higiene e Limpeza</div>
         <div class="card-body">
             <div class="row text-center g-4 justify-content-center">
                 <div class="col-md-4">
                     <img src="Source/tapete.jpg" alt="Tapete" class="img-fluid mb-2" style="height: 140px;">
                     <p class="mb-0 fw-bold">Tapete Higiênico</p>
-                    <p class="text-info fw-bold">R$ 84,90</p>
+                    <p class="fw-bold">R$ 84,90</p>
                 </div>
                 <div class="col-md-4">
                     <img src="Source/spray.jpg" alt="Spray" class="img-fluid mb-2" style="height: 140px;">
                     <p class="mb-0 fw-bold">Spray Limpeza</p>
-                    <p class="text-info fw-bold">R$ 19,90</p>
+                    <p class="fw-bold">R$ 19,90</p>
                 </div>
                 <div class="col-md-4">
                     <img src="Source/shampoo.jpg" alt="Shampoo" class="img-fluid mb-2" style="height: 140px;">
                     <p class="mb-0 fw-bold">Shampoo Neutro</p>
-                    <p class="text-info fw-bold">R$ 24,50</p>
+                    <p class="fw-bold">R$ 24,50</p>
                 </div>
             </div>
         </div>
