@@ -172,8 +172,7 @@
     document.getElementById('contato').onsubmit = function(event) {
         // Evita o envio padrão do formulário
         event.preventDefault();
-
-        // Pega o valor do campo de data e hora
+        
         const campoDataHora = document.getElementById('data').value;
         
         if (!campoDataHora) {
@@ -191,7 +190,7 @@
             alert('Erro: O petshop só aceita agendamentos entre 08:00 e 16:00.');
         } else {
             // Se passar na validação
-            alert('Agendamento para ' + petNome.value + ' enviado com sucesso! Aguarde nosso contato.');
+            alert('Agendamento enviado com sucesso! Aguarde nosso contato.');
             // limpa o formulário
             this.reset();
         }
