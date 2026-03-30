@@ -77,11 +77,11 @@
                         </div>
                         <div class="col-md-6">
                             <label for="cpf" class="form-label fw-bold small">CPF (somente números)</label>
-                            <input type="number" class="form-control" id="cpf" placeholder="000.000.00-00" required>
+                            <input type="number" class="form-control" id="cpf" placeholder="000.000.000-00" required>
                         </div>
                         <div class="col-md-6">
                             <label for="telefone" class="form-label fw-bold small">Telefone (somente números)</label>
-                            <input type="number" class="form-control" id="telefone" placeholder="(51)99999-9999" required>
+                            <input type="tel" class="form-control" id="telefone" placeholder="(51)99999-9999" required>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label fw-bold small d-block">Sexo</label>
@@ -137,7 +137,7 @@
                     <div class="row g-3 align-items-end">
                         <div class="col-md-8">
                             <label for="data" class="form-label fw-bold small">Data e Hora (8h às 16h)*</label>
-                            <input type="datetime-local" class="form-control" id="data" required>
+                            <input type="datetime-local" class="form-control" id="data" min="2026-03-30T08:00" required>
                         </div>
 
                         <div class="col-md-4">
@@ -149,7 +149,7 @@
                     </div>
                 </div>
                 
-                * Qualquer horário fora do informado será cancelado<br><br>    
+                * Qualquer horário fora do informado não será aceito<br><br>    
 
 
                 <button type="submit" class="btn w-100 fw-bold text-white py-2" style="background-color: #e98203; border: none;">FINALIZAR AGENDAMENTO</button>
@@ -170,8 +170,31 @@
 
 <script>
     document.getElementById('contato').onsubmit = function(event) {
+        // Evita o envio padrão do formulário
         event.preventDefault();
-        alert('Agendamento enviado com sucesso! Aguarde nosso contato para confirmação.');
+
+        // Pega o valor do campo de data e hora
+        const campoDataHora = document.getElementById('data').value;
+        
+        if (!campoDataHora) {
+            alert('Por favor, selecione uma data e horário.');
+            return;
+        }
+
+        // Converte para um objeto Date do JS
+        const dataSelecionada = new Date(campoDataHora);
+        const hora = dataSelecionada.getHours();
+        const minutos = dataSelecionada.getMinutes();
+
+        // Lógica de validação (8h às 16h)
+        if (hora < 8 || (hora >= 16 && minutos > 0) || hora > 16) {
+            alert('Erro: O petshop só aceita agendamentos entre 08:00 e 16:00.');
+        } else {
+            // Se passar na validação
+            alert('Agendamento para ' + petNome.value + ' enviado com sucesso! Aguarde nosso contato.');
+            // limpa o formulário
+            this.reset();
+        }
     };
 </script>
 
