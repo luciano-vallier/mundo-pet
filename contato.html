@@ -77,7 +77,7 @@
                         </div>
                         <div class="col-md-6">
                             <label for="cpf" class="form-label fw-bold small">CPF (somente números)</label>
-                            <input type="number" class="form-control" id="cpf" placeholder="000.000.000-00" required>
+                            <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" pattern="\d{11}" inputmode="numeric" required>
                         </div>
                         <div class="col-md-6">
                             <label for="telefone" class="form-label fw-bold small">Telefone (somente números)</label>
@@ -186,12 +186,11 @@
         const minutos = dataSelecionada.getMinutes();
 
         // Lógica de validação (8h às 16h)
-        if (hora < 8 || (hora >= 16 && minutos > 0) || hora > 16) {
+        if (hora < 8 || hora > 16 || (hora === 16 && minutos > 0)) {
             alert('Erro: O petshop só aceita agendamentos entre 08:00 e 16:00.');
         } else {
             // Se passar na validação
             alert('Agendamento enviado com sucesso! Aguarde nosso contato.');
-            // limpa o formulário
             this.reset();
         }
     };
